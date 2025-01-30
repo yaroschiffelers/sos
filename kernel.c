@@ -19,7 +19,7 @@ void *memset(void *buf, char c, size_t n)
 
 void kernel_main(void)
 {
-    // Set bbs to 0, since not all bootloaders recognize and zero-clear the bbs section
+    // Set bss to 0, since not all bootloaders recognize and zero-clear the bss section
     memset(__bss, 0, (size_t)__bss_end - (size_t)__bss);
 
     // Inf loop and kernel exit
