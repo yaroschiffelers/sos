@@ -6,23 +6,23 @@
 
 Tools
 
-```
+```bash
 brew install llvm lld qemu
 ```
 
 Add LLVM to your `PATH`:
 
-```
-$ export PATH="$PATH:$(brew --prefix)/opt/llvm/bin"
-$ which llvm-objcopy
+```bash
+export PATH="$PATH:$(brew --prefix)/opt/llvm/bin"
+which llvm-objcopy
 /opt/homebrew/opt/llvm/bin/llvm-objcopy
 ```
 
 MacOS users might need to install and configure riscv by hand:
 
-```
+```bash
 git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
-cd riscv-gnu-toolchain directory
+cd riscv-gnu-toolchain
 ./configure --prefix=/opt/riscv --enable-multilib
 ```
 
