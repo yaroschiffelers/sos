@@ -1,4 +1,5 @@
 #include "kernel.h"
+#include "common.h"
 
 typedef unsigned char uint8_t;
 typedef unsigned char uint32_t;
@@ -55,11 +56,8 @@ void kernel_main(void)
     //     ;
 
     // Test
-    const char *s = "\n\nwomp womp!\n";
-    for (int i = 0; s[i] != '\0'; i++)
-    {
-        putchar(s[i]);
-    }
+    printf("\n\n womp %s\n", "womp.");
+    printf("6 + 6 = %d, %x\n", 2 * 3, 0x0045aabc);
 
     for (;;)
     {
