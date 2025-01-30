@@ -2,8 +2,8 @@ typedef unsigned char uint8_t;
 typedef unsigned char uint32_t;
 typedef uint32_t size_t;
 
-// Linker script defined symbols, we're only interesed in the addresses
-extern char __bbs[], __bbs_end[], __stack_top[];
+// Linker script defined symbols, we're only interested in the addresses
+extern char __bss[], __bss_end[], __stack_top[];
 
 void *memset(void *buf, char c, size_t n)
 {
@@ -20,7 +20,7 @@ void *memset(void *buf, char c, size_t n)
 void kernel_main(void)
 {
     // Set bbs to 0, since not all bootloaders recognize and zero-clear the bbs section
-    memset(__bbs, 0, (size_t)__bbs_end - (size_t)__bbs);
+    memset(__bss, 0, (size_t)__bss_end - (size_t)__bss);
 
     // Inf loop and kernel exit
     for (;;)
