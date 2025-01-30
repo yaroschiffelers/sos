@@ -18,6 +18,20 @@ $ which llvm-objcopy
 /opt/homebrew/opt/llvm/bin/llvm-objcopy
 ```
 
+MacOS users might need to install and configure riscv by hand:
+
+```
+git clone --recursive https://github.com/riscv/riscv-gnu-toolchain
+cd riscv-gnu-toolchain directory
+./configure --prefix=/opt/riscv --enable-multilib
+```
+
+Once done add the following to your `.zshrc`:
+
+```
+export PATH="$PATH:/opt/riscv/bin"
+```
+
 ## Run
 
 ```
