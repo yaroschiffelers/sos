@@ -1,10 +1,6 @@
 #include "kernel.h"
 #include "common.h"
 
-typedef unsigned char uint8_t;
-typedef unsigned char uint32_t;
-typedef uint32_t size_t;
-
 // Linker script defined symbols, we're only interested in the addresses
 extern char __bss[], __bss_end[], __stack_top[];
 
